@@ -2,12 +2,9 @@
 
 
 
-/** CONSTANTES
- * 
- * SECCION DE DEFINICION DE CONSTANTES  
- * 
- **/
-
+/**
+ *!  CONSTANTES 
+ */
 const video = document.getElementById("Video1");
 
 const button = document.getElementById("play");
@@ -18,12 +15,9 @@ const view = window.location.href.split("/").slice(-1).toString().replace(".html
 
 
 
-/** VARIABLES
- * 
- * SECCION DE DEFINICION DE VARIABLES  
- * 
- * **/
-
+/** 
+ *! VARIABLES
+ */
 let pos = 1;
 
 let armador = []; //contendra el tiempo inicial/final y el selector con los que se haran las validaciones y operaciones.
@@ -38,22 +32,16 @@ let device = "";
 
 
 
-/** FUNCIONES
- * 
- * SECCCION DE DEFINICION DE FUNCIONES 
- * 
- **/
-
-/** INITIALIZE
-
- * Se encarga iniciar el audio y video luego de quitar el loader, 
-
- * controlando el tiempo de inicio con la variable timeInit 
-
- * @param {number} timeInit tiempo de espera para quitar el loader e iniciar todo el flujo de trabajo.
-
+/** 
+ *! FUNCIONES 
  */
 
+/** 
+ * INICIALIZE'
+ * Se encarga iniciar el audio y video luego de quitar el loader, 
+ * controlando el tiempo de inicio con la variable timeInit 
+ * @param {number} timeInit tiempo de espera para quitar el loader e iniciar todo el flujo de trabajo.
+ */
 function initialize(timeInit) {
 
     setTimeout(function () {
@@ -64,7 +52,7 @@ function initialize(timeInit) {
 
         $('.container').css({
 
-            // 'background': 'white',
+            // 'background': 'white', //! No es necesario.
 
             'border': 0
 
@@ -76,27 +64,19 @@ function initialize(timeInit) {
 
         music.play();
 
-        // video.currentTime = 30; // ideal para agilizar pruebas, inicia el video en el segundo que se indique
+        // video.currentTime = 30; //! ideal para agilizar pruebas, inicia el video en el segundo que se indique
 
     }, timeInit);
 
     video.addEventListener("timeupdate", function () {
 
-
-
         TimeStop(video.currentTime);
 
-
-
         var end = video.ended;
-
-
 
         if (end == true) {
 
             $(video).fadeOut('slow', function () {
-
-
 
                 $('body').css({
 
@@ -106,30 +86,22 @@ function initialize(timeInit) {
 
                 });
 
-
-
             });
 
             music.pause();
 
         }
 
-
-
     });
 
 }
 
-/** TIMESTOP
-
+/** 
+ * TIMESTOP
  * Se encarga de recorrer la data del json, modificarlo y detener 
-
- * el video, todo dependiendo del tiempo definido en pauseStart/Finish
-
+ * el video, todo dependiendo del tiempo definido en pauseStart o pauseFinish
  * @param {number} videoCurrentTime Es el segundo en el cual se va ejecutando el video.
-
  */
-
 function TimeStop(videoCurrentTime) {
 
     for (var index in armador) {
@@ -166,16 +138,12 @@ function TimeStop(videoCurrentTime) {
 
 }
 
-/** SET TIME STOP
-
+/** 
+ * SET TIME STOP
  * Se encarga de añadir hidden a los elementos aisgnados y darle continuidad al video
-
  * @param {string} elem Es el elemento al cual se le aplicara la clase hidden
-
  * @param {number} sec Es el segundo en el cual se va a continuar el video.
-
  */
-
 function SetTimeStop(elem, sec) {
 
     pos++;
@@ -188,24 +156,20 @@ function SetTimeStop(elem, sec) {
 
 }
 
-/** RESTAR
-
+/** 
+ * RESTART
  * Reinicia todo el video
-
  */
-
 function restart() {
 
     video.currentTime = 0;
 
 }
 
-/** VIDPLAY
-
+/** 
+ * VIDPLAY
  * Continua el video o lo pausa si ya se encontraba corriendo
-
  */
-
 function vidplay() {
 
     if (video.paused) {
@@ -224,24 +188,20 @@ function vidplay() {
 
 }
 
-/** TIME
-
+/** 
+ * TIME
  * Retorna el Tiempo actual del video (en segundos). 
-
  */
-
 function time() {
 
     console.log(video.currentTime);
 
 }
 
-/** LOADJSON
-
+/** 
+ * LOADJSON
  * Carga el Json dependiendo de la video a mostrar 
-
  */
-
 function loadJson() {
 
     switch (view) {
@@ -274,14 +234,11 @@ function loadJson() {
 
 }
 
-/** DEVICE RECOGNITION
-
+/** 
+ * DEVICE RECOGNITION
  * Detecta cual es el dispositivo table que se esta utilizando por medio del width 
- 
  * inicia el flujo del video. 
-
  */
-
 function deviceRecognition() {
 
     if (width > 1300) {
@@ -309,12 +266,12 @@ function deviceRecognition() {
 
 }
 
-/** INICIALIZADOR 
 
- * Here is when the magic finally comes alive.
 
+
+/**
+ *! DOCUMENT READY!!!! Here is when the magic finally comes alive 
  */
-
 $(document).ready(function () {
 
     deviceRecognition();
@@ -337,7 +294,7 @@ $(window).on("orientationchange", function (event) {
         console.log(a);
         console.log(b);
 
-        if (a < b) { // tablet landscape
+        if (a < b) { //! tablet landscape
 
             $('.container').addClass('hidden');
             $('.cover').removeClass('hidden');
@@ -345,7 +302,7 @@ $(window).on("orientationchange", function (event) {
             video.pause();
             music.pause();
 
-        } else { //tablet portrait
+        } else { //! tablet portrait
 
             $('.container').removeClass('hidden');
             $('.cover').addClass('hidden');
