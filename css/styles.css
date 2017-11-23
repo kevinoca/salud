@@ -1,0 +1,269 @@
+.cover {
+    width: 100%;
+    display: none;
+}
+
+.index-cont {
+    margin-top: 3%;
+    display: block;
+}
+
+@media (max-width:1500px) and (orientation: landscape) {
+    .cover {
+        display: block;
+    }
+    .index-cont{
+        display: none;
+    }
+}
+
+@font-face {
+    font-family: terondaremorena;
+    src: url('assets/terondaremorena.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: 100%/1.3 Century Gothic, Verdana, sans-serif;
+}
+
+body {
+    overflow: hidden;
+    min-width: 20em;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+    color: #444;
+    /* margin-bottom: 2em; */
+    font-size: 36px;
+}
+
+.circle,
+.circle:before,
+.circle:after {
+    border-radius: 50%;
+}
+
+nav {
+    width: 800px;
+    margin: 8em auto 0;
+}
+
+nav ul {
+    position: relative;
+    padding: 45%;
+    max-width: 0;
+    max-height: 0;
+    list-style: none;
+    left: 43px;
+}
+
+nav li {
+    position: absolute;
+}
+
+.slice {
+    border-bottom: solid 20px white;
+}
+
+.slice {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 100% 100%;
+}
+
+.unsel {
+    border: 20px solid white;
+    top: 29%;
+    left: 25%;
+    width: 42%;
+    height: 41%;
+    background: #fff;
+    text-align: center;
+}
+
+.thermo {
+    transform: rotate(20deg) skewX(30deg);
+}
+
+.tensio {
+    transform: rotate(80deg) skewX(30deg);
+}
+
+.oxy {
+    transform: rotate(140deg) skewX(30deg);
+}
+
+.scale {
+    transform: rotate(200deg) skewX(30deg);
+}
+
+.gluco {
+    transform: rotate(260deg) skewX(30deg);
+}
+
+.ecg {
+    transform: rotate(320deg) skewX(30deg);
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+}
+
+nav label {
+    cursor: pointer;
+}
+
+.slice label {
+    display: block;
+    width: 200%;
+    height: 200%;
+    transform: skew(-30deg) rotate(-70deg);
+    /* //  box-shadow: 0 0 .1em black; */
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: solid 20px white;
+}
+
+.thermo label,
+.othermo:checked~nav .unsel {
+    background: #314D99;
+}
+
+.tensio label,
+.otensio:checked~nav .unsel {
+    background: #F7BEC4;
+}
+
+.oxy label,
+.ooxy:checked~nav .unsel {
+    background: #82BB4F;
+}
+
+.scale label,
+.oscale:checked~nav .unsel {
+    background: #C74992;
+}
+
+.gluco label,
+.ogluco:checked~nav .unsel {
+    background: #E2BCBC;
+}
+
+.ecg label,
+.oecg:checked~nav .unsel {
+    background: #FCE4BF;
+}
+
+.thermo span {
+    font-family: terondaremorena;
+    color: white;
+    font-size: 40px;
+    transform: rotate(50deg) !important;
+    display: block;
+    padding: 0 0 0 140px;
+}
+
+.tensio span {
+    font-family: terondaremorena;
+    color: white;
+    font-size: 40px;
+    transform: rotate(-10deg) !important;
+    display: block;
+    padding: 80px 0 0 80px;
+}
+
+.oxy span {
+    font-family: terondaremorena;
+    color: white;
+    font-size: 40px;
+    transform: rotate(-70deg) !important;
+    display: block;
+    padding: 100px 0 0 0;
+}
+
+.scale span {
+    font-family: terondaremorena;
+    color: white;
+    font-size: 40px;
+    transform: rotate(-130deg) !important;
+    display: block;
+    padding: 70px 80px 0 0;
+}
+
+.gluco span {
+    font-family: terondaremorena;
+    color: white;
+    font-size: 40px;
+    transform: rotate(-190deg) !important;
+    display: block;
+    padding: 0 90px 60px 0;
+}
+
+.ecg span {
+    font-family: terondaremorena;
+    color: white;
+    font-size: 40px;
+    transform: rotate(-250deg) !important;
+    display: block;
+    padding: 0 0 70px 20px;
+}
+
+.unsel span {
+    font-family: terondaremorena;
+    color: white;
+    font-size: 40px;
+    display: block;
+    text-align: center;
+}
+
+.buttonclose {
+    padding: 0.5em;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 3em;
+    display: block;
+    margin: 0 auto;
+    width: 7.5em;
+    height: 1.5em;
+    /* margin-top: 5em; */
+    text-align: center;
+    font-family: verdana;
+}
+
+@media(max-width: 980px) {
+    .index-cont {
+        /* margin-top: 3%; */
+        margin-top: 20%;
+    }
+    h1 {
+        margin-top: 2em;
+    }
+    .buttonclose {
+        margin-top: 5em;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
