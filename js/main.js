@@ -86,6 +86,8 @@ function initialize(timeInit) {
 
                 });
 
+                window.location = '/salud/';
+
             });
 
             music.pause();
@@ -244,8 +246,34 @@ function deviceRecognition() {
     if (width > 1300) {
 
         device = "Samsung";
-        // $('#asd').attr('content', 'width=device-width, initial-scale=0.8130, maximum-scale=0.8130');
-        $('#asd').attr('content', 'width=device-width, initial-scale=0.78, maximum-scale=0.78');
+        $('#asd').attr('content', 'width=device-width, initial-scale=1, maximum-scale=1');
+        // $('#asd').attr('content', 'width=device-width, initial-scale=0.5, maximum-scale=0.5');
+        $('.container').css('width', 'auto');
+
+        $('#Video1').css({
+            'margin': '0 auto',
+            'display': 'block',
+            'width': 665
+        });
+
+        $(`
+            .circle1,
+            .circle2,
+            .circle3,
+            .circle4,
+        
+            .capa1,
+            .capa2,
+            .capa3,
+            .capa4,
+            .capa5,
+            .capa6,
+            .capa7,
+            .capa8,
+            .capa9
+
+        
+        `).addClass("mobile");
 
     } else {
 
@@ -260,13 +288,29 @@ function deviceRecognition() {
 
         initialize(1500);
 
-    };
+        // returnDimensions();
 
-    return device;
+    };
 
 }
 
 
+/**
+ * funcion returnDimensions
+ * retorna las dimensiones del dispositivo; el ancho y alto del viewport
+ */
+function returnDimensions() {
+
+    let dimensions = {
+
+        'ancho': window.innerWidth,
+        'alto': window.innerHeight
+
+    };
+
+    window.alert(dimensions.ancho); //!1920 px
+    window.alert(dimensions.alto); //!1080 px
+}
 
 
 /**
