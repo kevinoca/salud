@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="asd">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bewell presentation</title>
+    <link rel="stylesheet/less" type="text/css" href="mytensio.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+</head>
+
+<body>
+
+    <img src="../../images/background.png" alt="Gire el dispositivo." class="cover hidden">
+
+    <!-- CONTROLES -->
+
+    <div id="buttonbar" class="hidden">
+
+        <button id="restart" onclick="restart();">RESTART</button>
+
+        <button id="play" onclick="vidplay()">PLAY</button>
+
+        <button id="fastFwd" onclick="time()">TIME</button>
+
+    </div>
+
+
+
+    <!-- Audio -->
+
+    <audio class="hidden" id="music" loop>
+
+        <source src="../../assets/music.mp3" type="audio/mp3">
+
+    </audio>
+
+
+
+    <div class="container">
+
+        <!-- <a class="botonclose" href="/">CERRAR</a> -->
+
+        
+        <!-- CAPAS -->
+
+
+        <div class="capa1 hidden" onclick="SetTimeStop('.capa1',63.5);"></div>
+
+
+
+        <div class="capa2 hidden" onclick="SetTimeStop('.capa2',71.5);"></div>
+
+
+
+        <div class="capa3 hidden" onclick="SetTimeStop('.capa3',105.1);"></div>
+
+
+
+        <!-- <div class="capa4 hidden" onclick="SetTimeStop('.capa4',99.1);"></div> -->
+
+
+
+        <div class="capa5 hidden" onclick="SetTimeStop('.capa5',130.1);"></div>
+
+
+
+        <div class="capa6 hidden" onclick="SetTimeStop('.capa6',139.1);"></div>
+
+
+
+        <div class="capa7 hidden" onclick="SetTimeStop('.capa7',145.1);"></div>
+
+
+
+        <div class="capa8 hidden" onclick="SetTimeStop('.capa8',156.8);"></div>
+
+
+
+        <!-- <div class="capa9 hidden" onclick="vidplay(13);"></div> -->
+
+
+
+        <!-- CIRCULOS -->
+
+
+
+        <!-- <div class="circle1 hidden" onclick="SetTimeStop('.circle1',51.5);"></div> -->
+
+
+
+        <div class="circle2 hidden" onclick="SetTimeStop('.circle2',86.1);"></div>
+
+
+
+        <div class="circle3 hidden" onclick="SetTimeStop('.circle3',98.6);"></div>
+
+
+
+        <div class="circle4 hidden" onclick="SetTimeStop('.circle4',112.5);"></div>
+
+
+
+        <!-- LOADER -->
+
+
+
+        <div class="loader">
+
+            <img src="../../images/gif-load.gif" alt="loader">
+
+        </div>
+
+
+
+        <video id="Video1" class="hidden">
+
+            <source src="mytensio.mp4" type="video/mp4" />
+
+        </video>
+
+        <a class="buttonfooter" href="/salud/"></a>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../../js/main.js"></script>
+
+</body>
+
+
+
+</html>

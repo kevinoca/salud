@@ -1,0 +1,65 @@
+[
+    {
+        "pauseStart": "79",
+        "pauseFinish": "79.9",
+        "startingAt":   "77",
+        "startingEnd":  "77.5",
+        "selector": ".capa1"
+    },
+    {
+        "pauseStart": "87.5",
+        "pauseFinish": "89.5",
+        "startingAt":   "84.5",
+        "startingEnd":  "85",
+        "selector": ".capa2"
+    },
+    {
+        "pauseStart": "99.5",
+        "pauseFinish": "100",
+        "startingAt":   "98",
+        "startingEnd":  "98.5",
+        "selector": ".circle2"
+    },
+    {
+        "pauseStart": "113.5",
+        "pauseFinish": "114.5",
+        "startingAt":   "112",
+        "startingEnd":  "112.5",
+        "selector": ".circle3"
+    },
+    {
+        "pauseStart": "121",
+        "pauseFinish": "121.5",
+        "startingAt":   "118",
+        "startingEnd":  "118.5",
+        "selector": ".capa3"
+    },
+    {
+        "pauseStart": "126.5",
+        "pauseFinish": "127.5", 
+        "startingAt":   "124.5",
+        "startingEnd":  "125",
+        "selector": ".capa4"
+    },
+    {
+        "pauseStart": "139",
+        "pauseFinish": "140",
+        "startingAt":   "136",
+        "startingEnd":  "136.5",
+        "selector": ".capa5"
+    },
+    {
+        "pauseStart": "146",
+        "pauseFinish": "147.5",
+        "startingAt":   "143",
+        "startingEnd":  "143.5",
+        "selector": ".capa6"
+    },
+    {
+        "pauseStart": "154",
+        "pauseFinish": "155",
+        "startingAt":   "150",
+        "startingEnd":  "150.5",
+        "selector": ".capa8"
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "pauseStart": "60.3",
+        "pauseFinish": "62",
+        "startingAt":   "57.5",
+        "startingEnd":  "58",
+        "selector": ".capa2"
+    },
+    {
+        "pauseStart": "71.5",
+        "pauseFinish": "72.5",
+        "startingAt":   "68.5",
+        "startingEnd":  "69",
+        "selector": ".circle2"
+    },
+    {
+        "pauseStart": "86",
+        "pauseFinish": "86.5",
+        "startingAt":   "85",
+        "startingEnd":  "85.5",
+        "selector": ".circle3"
+    },
+    {
+        "pauseStart": "92.4",
+        "pauseFinish": "93",
+        "startingAt":   "89",
+        "startingEnd":  "89.5",
+        "selector": ".capa3"
+    },
+    {
+        "pauseStart": "98",
+        "pauseFinish": "99",
+        "startingAt":   "96.5",
+        "startingEnd":  "97",
+        "selector": ".capa4"
+    },
+    {
+        "pauseStart": "108",
+        "pauseFinish": "109",
+        "startingAt":   "107",
+        "startingEnd":  "107.5",
+        "selector": ".capa5"
+    },
+    {
+        "pauseStart": "117",
+        "pauseFinish": "118",
+        "startingAt":   "114.5",
+        "startingEnd":  "115",
+        "selector": ".capa6"
+    },
+    {
+        "pauseStart": "125",
+        "pauseFinish": "126",
+        "startingAt":   "123",
+        "startingEnd":  "123.5",
+        "selector": ".capa8"
+    }
+]
